@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            border: 0px;
+            text-align: center;
+        }
+
+        .container {
+            background-color: skyblue;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+
+        .container>div {
+            background-color: lightcoral;
+            color: white;
+            width: 100px;
+            height: 150px;
+            margin-top: 10px;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="subdiv">1</div>
+        <div class="subdiv">2</div>
+        <div class="subdiv">3</div>
+        <div class="subdiv">4</div>
+        <div class="subdiv">5</div>
+        <div class="subdiv">6</div>
+        <div class="subdiv">7</div>
+        <div class="subdiv">8</div>
+    </div>
+
+</body>
+
+</html>

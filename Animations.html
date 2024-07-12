@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            height: 50px;
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .outerBox {
+            background-color: rgb(248, 158, 158);
+            width: 500px;
+            height: 550px;
+            border: 2px solid;
+            border-radius: 25px;
+            padding: 5px;
+        }
+
+        .innerBox {
+            background-color: rgb(235, 30, 30);
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.innerBox {
+            position: relative;
+            animation-name: myAnime1;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            animation-delay: 2s;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes myAnime1 {
+
+            0% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 390px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: green;
+                left: 390px;
+                top: 390px;
+            }
+
+            75% {
+                background-color: blue;
+                left: 0;
+                top: 390px;
+            }
+
+            100% {
+                background-color: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+        .Linear {
+            background-color: #e21d1d;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.Linear {
+            position: relative;
+            animation-name: myAnime2;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+        }
+
+        .Ease {
+            background-color: #e21d1d;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.Ease {
+            position: relative;
+            animation-name: myAnime2;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+        }
+
+        .Easein {
+            background-color: #e21d1d;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.Easein {
+            position: relative;
+            animation-name: myAnime2;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+        }
+
+        .Easeout {
+            background-color: #e21d1d;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.Easeout {
+            position: relative;
+            animation-name: myAnime2;
+            animation-duration: 4s;
+            animation-timing-function: ease-out;
+        }
+
+        .Easeinout {
+            background-color: #e21d1d;
+            width: 100px;
+            height: 90px;
+            margin: 5px;
+            padding: 20px;
+            border: 2px solid;
+            border-radius: 25px;
+        }
+
+        .outerBox:hover>.Easeinout {
+            position: relative;
+            animation-name: myAnime2;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes myAnime2 {
+            0% {
+                background-color: red;
+                left: 0px;
+            }
+
+            100% {
+                background-color: yellow;
+                left: 380px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerBox">
+        <h1>CSS ANIMATIONS</h1>
+        <div class="innerBox"></div>
+    </div><br>
+
+    <div class="outerBox">
+        <h1>ANIMATION TIMING PROPERTY</h1>
+        <div class="Linear">Linear</div>
+        <div class="Ease">Ease</div>
+        <div class="Easein">Ease-In</div>
+        <div class="Easeout">Ease-out</div>
+        <div class="Easeinout">Ease-In-Out</div>
+    </div>
+</body>
+
+</html>

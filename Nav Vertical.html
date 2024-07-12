@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+
+        .outerBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(248, 158, 158);
+            width: 100px;
+            height: 260px;
+            border: 2px solid;
+            border-radius: 10px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(157, 152, 152);
+            width: 90px;
+            height: 50px;
+            text-decoration: none;
+        }
+
+        a img {
+            width: 90px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        a:hover {
+            animation: myAnime1 2s ease-in-out infinite;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+
+        @keyframes myAnime1 {
+
+            0% {
+                background-color:rgb(248, 158, 158);;
+            }
+
+            25% {
+                background-color: rgb(220, 220, 116);
+            }
+
+            50% {
+                background-color: rgb(114, 205, 114);
+            }
+
+            75% {
+                background-color: rgb(149, 149, 215);
+            }
+
+            100% {
+                background-color: rgb(248, 158, 158);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outerBox">
+        <a href="#" target="_blank" title="Logo"><img src="sun.png"></a>
+        <a href="#" target="_blank">HOME</a>
+        <a href="#" target="_blank">ABOUT</a>
+        <a href="#" target="_blank">CONTACT</a>
+        <a href="#" target="_blank">SUPPORT</a>
+
+        <div class="innerBox"></div>
+    </div>
+</body>
+
+</html>

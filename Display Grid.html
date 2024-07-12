@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Grid 1</title>
+    <link rel="shortcut icon" href="transparency.png">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            gap: 5px;
+            background-color: bisque;
+            padding: 2px;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'side body body body'
+                'side body body body'
+                'foot foot foot foot';
+            /* for assigning grid names for CSS elements */
+            grid-template-rows: 0.6fr 1.5fr 1.5fr 0.4fr;
+            grid-template-columns: 0.7fr 3.3fr;
+        }
+
+        .commonToAllElements {
+            padding: 10px;
+            border-radius: 15px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        nav {
+            grid-area: navbar;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgb(207, 180, 80);
+        }
+
+        span>.a_nav_main {
+            font-size: 25px;
+            background-color: rgb(201, 141, 111);
+            padding: 5px 10px;
+            font-weight: bold;
+            text-decoration: none;
+            /* for not underlining hyperlinks */
+            border: 2px double black;
+            border-radius: 25px;
+        }
+
+        span>.a_nav_main:hover {
+            background-color: antiquewhite;
+            font-size: 28px;
+        }
+
+        span>.a_nav_login {
+            font-size: 10px;
+            background-color: rgb(94, 189, 86);
+            padding: 5px 10px;
+            font-weight: bold;
+            text-decoration: none;
+            /* for not underlining hyperlinks */
+            border: 2px double black;
+            border-radius: 25px;
+        }
+
+        span>.a_nav_login:hover {
+            font-size: 12px;
+            background-color: antiquewhite;            
+        }
+
+
+        .myDivL {
+            grid-area: side;
+            text-align: center;
+            background-color: rgb(62, 199, 199);
+        }
+
+        .myDivR {
+            grid-area: body;
+            text-align: center;
+            background-color: rgb(95, 215, 109);
+        }
+
+        footer {
+            grid-area: foot;
+            text-align: center;
+            background-color: lightcoral
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="commonToAllElements">
+            <span style="flex: 15%;">
+                <img src="log2.png" width="70px" height="70px">
+                <span style="font-size: 22px; padding-top: 0px;">CROSSxFIT</span>
+            </span>
+
+            <nav class="commonToAllElements" style="flex: 70%;">
+                <span>
+                    <a href="Background Image.html" target="_blank" class="a_nav_main">Home</a>
+                </span>
+
+                <span>
+                    <a href="Background Image.html" target="_blank" class="a_nav_main">About</a>
+                </span>
+
+                <span>
+                    <a href="Background Image.html" target="_blank" class="a_nav_main">Contact Us</a>
+                </span>
+            </nav>
+
+            <nav class="commonToAllElements" style="flex: 15%;">
+                <span>
+                    <a href="Background Image.html" target="_blank" class="a_nav_login">Login</a>
+                </span>
+
+                <span>
+                    <a href="Background Image.html" target="_blank" class="a_nav_login">Register</a>
+                </span>
+            </nav>
+        </nav>
+
+        <div class="myDivL commonToAllElements">
+            <h1>SIDE BAR</h1><br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic magni natus quas laudantium ratione ipsam
+            veritatis neque sunt totam molestias eius qui cum, quia maxime voluptate. Et laborum saepe autem magnam
+            aliquam ex harum aperiam ducimus possimus. Suscipit soluta laboriosam accusantium unde, sint atque quisquam?
+        </div>
+
+        <div class="myDivR commonToAllElements">
+            <h1>BODY</h1><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eius doloribus nesciunt illum eaque ex
+            est modi. Dolor natus impedit sed eaque alias, hic tenetur animi, totam dolore repudiandae error tempore
+            beatae distinctio temporibus eum assumenda quisquam, maiores omnis eveniet et aspernatur rerum
+            necessitatibus. Ullam culpa ipsa, alias sunt temporibus ipsum consectetur fuga, recusandae modi quos
+            consequatur iure delectus, natus unde quasi dolor quas mollitia sapiente! Praesentium natus doloribus
+            suscipit nesciunt, inventore quisquam nobis, iure illum enim quis delectus, minima incidunt aut temporibus
+            alias. Sunt voluptatum omnis veniam eaque repudiandae ad consequuntur deleniti corrupti hic id in, mollitia
+            alias expedita. In non asperiores culpa sed, fugiat magnam, et saepe incidunt animi possimus optio ut cum
+            quaerat modi aperiam esse earum dolorem tempora? Beatae sed cum debitis sequi, aut quos tempore error
+            doloribus ex, iste voluptates exercitationem, architecto suscipit consequuntur sit accusamus labore
+            molestiae. Quisquam aut voluptatem maxime quibusdam distinctio possimus ipsum numquam ex similique a sit at,
+            ipsa recusandae id libero, illum incidunt inventore nulla? Animi optio natus quidem molestiae! Animi aliquam
+            rerum architecto, amet laudantium nisi dicta quidem sunt facilis eligendi! Ducimus doloremque, aspernatur
+            neque, natus consectetur ad molestiae nisi eos debitis incidunt, nostrum sequi exercitationem provident
+            voluptatibus saepe nobis aliquam repellat accusantium eius. Commodi dolores facilis distinctio repellat rem
+            vero nesciunt minima iusto iure omnis, id quod illo quam similique doloribus animi. Culpa voluptatum nihil
+            vitae consequuntur maxime natus ea dolores non eos? Tenetur ex voluptas cupiditate iusto a sint fugiat et
+            perspiciatis eaque modi, atque aspernatur delectus mollitia neque vero, at magni repellendus inventore
+            placeat officia possimus quia eos! Consequatur illum eveniet reprehenderit, quidem architecto corrupti
+            facilis quo ducimus accusamus quia a pariatur, quas magni nihil cum aliquam inventore distinctio laborum ad
+            porro molestias, commodi dignissimos eaque ipsa! Natus harum veritatis ad deleniti nulla excepturi, officiis
+            inventore.
+        </div>
+
+        <footer class="commonToAllElements">
+            <h1>FOOTER</h1>
+        </footer>
+    </div>
+</body>
+
+</html>

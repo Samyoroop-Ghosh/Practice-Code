@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: rgb(224, 126, 126);
+            width: 715px;
+            height: 525px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px ridge;
+            border-radius: 25px;
+            display: grid;
+            grid-template-rows: 100px 400px;
+            gap: 5px;
+            align-items: center;
+            justify-items: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+        }
+
+        .container>h1 {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding-left: 40px;
+            background-color: rgb(229, 222, 97);
+            font-size: 50px;
+            font-weight: bold;
+            height: 100px;
+            width: 100%;
+            border-radius: 25px;
+        }
+
+        .calendar {
+            background-color: rgb(183, 234, 183);
+            height: 400px;
+            width: 100%;
+            border-radius: 25px;
+            display: grid;
+            grid-template-rows: repeat(6, 60px);
+            grid-template-areas:
+                'day'
+                'row' 
+                'row' 
+                'row' 
+                'row' 
+                'row';
+        }
+
+        .day {
+            width: 700px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(7, 1fr);
+            background-color: rgb(99, 224, 99);
+            border-radius: 25px;
+            margin-top: 5px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .row {
+            width: 700px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(7, 1fr);
+            font-size: 25px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>DECEMBER 2023</h1>
+        <div class="calendar">
+            <div class="day">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+
+            <div class="row">
+                <div> </div>
+                <div> </div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+            </div>
+
+            <div class="row">
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+                <div>11</div>
+                <div>12</div>
+            </div>
+
+            <div class="row">
+                <div>13</div>
+                <div>14</div>
+                <div>15</div>
+                <div style="border: 2px dotted; border-radius: 8px;">16</div>
+                <div>17</div>
+                <div>18</div>
+                <div>19</div>
+            </div>
+
+            <div class="row">
+                <div>20</div>
+                <div>21</div>
+                <div>22</div>
+                <div>23</div>
+                <div>24</div>
+                <div>25</div>
+                <div>26</div>
+            </div>
+
+            <div class="row">
+                <div>27</div>
+                <div>28</div>
+                <div>29</div>
+                <div>30</div>
+                <div>31</div>
+                <div> </div>
+                <div> </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

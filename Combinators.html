@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-decoration: underline;
+        }
+        .DescendantSelector {
+            background-color: rgb(179, 243, 243);
+        }
+
+        .DescendantSelector p {
+            background-color: yellow;
+            padding: 1px 5px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .ChildSelector {
+            background-color: rgb(179, 243, 243);
+        }
+
+        .ChildSelector>p {
+            background-color: yellow;
+            padding: 1px 5px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .SiblingSelector {
+            background-color: rgb(179, 243, 243);
+        }
+
+        .SiblingSelector+p {
+            background-color: yellow;
+            padding: 1px 5px;
+            margin: 5px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h5>PS: ALL SELECTORS HAVE BEEN APPLIED TO THE P TAG</h3>
+    <h1>Descendant Selector (div  p)</h1>
+    <div class="DescendantSelector">
+        <ul>
+            <li>
+                <p>Selects all descendant elements under its parent</p>
+            </li>
+            <li>
+                <p>Even sub elements (ie. list elements will also be selected cuz they are descendants of div)</p>
+            </li>
+        </ul>
+        <p>Paragraph inside div</p>
+    </div>
+    <p>Paragraph outside div</p>
+
+    <h1>Child Selector (div > p)</h1>
+    <div class="ChildSelector">
+        <ul>
+            <li>
+                <p>Selects only direct child elements under it's parent.</p>
+            </li>
+            <li>
+                <p>Sub elements are ignored (ie. list elements inside a div will be ignored)</p>
+            </li>
+        </ul>
+        <p>Paragraph inside div</p>
+    </div>
+    <p>Paragraph outside div</p>
+
+    <h1>Sibling Selector (div ~ or + p)</h1>
+    <div class="SiblingSelector">
+        <ul>
+            <li>
+                <p>Selects an element that is immediately following the specific element.</p>
+            </li>
+            <li>
+                <p>It matches the second element only when the element immediately follows thefirstelement, and both of
+                    them are the children of the same parent</p>
+            </li>
+            <li>
+                <p>We use ~ to select all the signs following the sibling and + to only select the immediate next occurence</p>
+            </li>
+        </ul>
+        <p>Paragraph 1 in the div</p>
+        <div class="SiblingSelector">
+            <p>Paragraph 2 in the div</p>
+        </div>
+    </div>
+    <p>Paragraph 3 After the div</p>
+    <p>Paragraph 4 After the div</p>
+
+</body>
+
+</html>

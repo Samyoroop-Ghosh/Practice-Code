@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations 3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: aqua;
+            width: 100vh;
+            height: 100vh;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .container>.demo {
+            background-color: lightcoral;
+            width: 10vh;
+            height: 4vh;
+            display: flex;
+            border: 1px solid;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .container>.topleft {
+            top: 0;
+            /* Added to position at the top */
+            left: 0;
+            /* Added to position at the left */
+        }
+
+        .container>.topright {
+            top: 0;
+            /* Added to position at the top */
+            right: 0;
+            /* Added to position at the right */
+        }
+
+        .container>.bottomleft {
+            bottom: 0;
+            /* Added to position at the bottom */
+            left: 0;
+            /* Added to position at the left */
+        }
+
+        .container>.bottomright {
+            bottom: 0;
+            /* Added to position at the bottom */
+            right: 0;
+            /* Added to position at the right */
+        }
+
+        .container:hover>.topright {
+            animation: animeTR 15s ease-out infinite;
+        }
+
+        .container:hover>.topleft {
+            animation: animeTL 15s ease-out infinite;
+        }
+
+        .container:hover>.bottomright {
+            animation: animeBR 15s ease-out infinite;
+        }
+
+        .container:hover>.bottomleft {
+            animation: animeBL 15s ease-out infinite;
+        }
+
+        @keyframes animeTL {
+            50% {
+                transform: translate(40vh,48vh) rotate(90deg);
+                background-color: red;
+                border: 0px;
+            }
+        }
+
+        @keyframes animeTR {
+            50% {
+                transform: translate(-40vh,48vh) rotate(-90deg);
+                background-color: green;
+            }
+        }
+
+        @keyframes animeBL {
+            50% {
+                transform: translate(45vh,-54vh) rotate(180deg);
+                background-color: blue;
+            }
+        }
+
+        @keyframes animeBR {
+            50% {
+                transform: translate(-45vh,-44vh) rotate(-180deg);
+                background-color: yellow;
+            }
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topleft demo"></div>
+        <div class="topright demo"></div>
+        <div class="bottomleft demo"></div>
+        <div class="bottomright demo"></div>
+    </div>
+</body>
+
+</html>

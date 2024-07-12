@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex 2</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(212, 172, 210, 0.5);
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .leftdiv {
+            background-color: rgba(255, 0, 0, 0.5);
+            flex: 50%;
+            font-weight: bolder;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .rightdiv {
+            background-color: rgba(0, 0, 255, 0.5);
+            flex: 50%;
+            font-weight: bolder;
+            text-align: center;
+            padding: 5px;
+        }
+
+        @media (max-width: 700px) {
+            .leftdiv, .rightdiv {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>Responsive Flexbox</h1>
+    <p>Different Layouts for Different Screen Sizes</p>
+    <p><b>Browser Window</b></p>
+    <div class="container">
+        <div class="leftdiv">1 : Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, dolorem.</div>
+        <div class="rightdiv">2 : Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique, deserunt!</div>
+    </div>
+
+</body>
+
+</html>

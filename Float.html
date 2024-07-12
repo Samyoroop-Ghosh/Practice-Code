@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 5px 5px;
+            background-color: aliceblue;
+            border: solid 2px;
+            padding: 5px;
+        }
+
+        .container>h1 {
+            background-color: rgb(220, 197, 107);
+            color: navy;
+            text-decoration: dashed;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px steelblue;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 5px;
+            padding: 5px;
+
+        }
+
+        .container>img {
+            width: 90px;
+            height: 120px;
+            margin: 5px;
+            margin-left: 10px;
+            background-color: bisque;
+            border: solid 2px;
+            padding: 5px;
+            /* Helps position the image relative to the paragraph*/
+            float:left;
+        }
+
+        .container>p {
+            margin: 5px;
+            background-color: rgb(108, 231, 124);
+            text-align: center;
+            padding: 5px;
+        }
+
+        /* Excludes the element from the float */
+        .container>.clr {
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume</h1>
+        <img src="https://cdn.vectorstock.com/i/1000v/51/05/male-profile-avatar-with-brown-hair-vector-12055105.jpg" />
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sit non iste delectus voluptatum laborum,
+            laudantium eveniet officia sunt expedita temporibus, illo adipisci. Consequuntur, fuga fugiat. Error debitis
+            voluptas at eum nulla? Iste enim dolorem repellendus minima commodi autem voluptate, magni sit explicabo
+            tempora.</p>
+
+        <p class="clr">Ut obcaecati distinctio blanditiis sit nemo quasi in. Esse, impedit, ipsam voluptate, quo accusamus
+            ipsa similique illo necessitatibus culpa id ullam sunt natus iusto. Quia mollitia numquam aperiam voluptate
+            soluta! Amet rem sunt nesciunt vel libero enim nihil, error eius suscipit odit. Beatae velit, nulla sint
+            iure magnam, magni adipisci quasi excepturi praesentium placeat hic ratione harum ipsum amet consequatur
+            repudiandae nemo inventore aut quidem officiis officia. Ratione, architecto! Harum nisi nesciunt ab a, enim
+            molestiae illum et accusamus est labore nam similique adipisci mollitia, dolorum voluptatem vel nulla. Vel
+            nisi, quasi consequatur vitae fugit fuga soluta incidunt? Incidunt voluptate optio ullam, officiis inventore
+            voluptates eum?</p>
+    </div>
+</body>
+
+</html>

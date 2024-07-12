@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            margin: 0px;
+        }
+
+        .divParent {
+            width: 300px;
+            height: 300px;
+            border-radius: 60px; /* for rounded borders */  
+            margin : 50px;          
+            padding: 20px;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+        }
+
+        .divChild {
+            width: 260px;
+            height: 260px;
+            border: 30px white solid;
+            border-radius: 50px; /* for rounded borders */
+            padding: 50px;
+        }
+
+        .divInnerCircle {
+            width: 100px;
+            height: 100px;
+            border: 15px white solid;
+            border-radius: 60px; /* for rounded borders */
+            position: relative; /* for positioning inner circle within .divChild */
+            bottom: 25px;
+        }
+
+        .divCornerCircle {
+            width: 15px;
+            height: 15px;
+            border: 15px white solid;
+            border-radius: 20px; /* for rounded borders */
+            position: relative; /* for positioning corner circle within .divInnerCircle */
+            bottom : 30px;
+            left : 95px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divParent">
+        <div class="divChild">
+            <div class="divCornerCircle"></div>
+            <div class="divInnerCircle"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

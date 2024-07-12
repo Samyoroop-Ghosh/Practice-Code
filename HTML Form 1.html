@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<title>HTML Form</title>
+
+<body>
+    <h2>REGISTRATION FORM</h2>
+ 
+    <form action="/actionpage.php" method="get" target="_blank" autocomplete="on">
+        <hr><hr><br>
+        <!-- Textbox -->
+        <label for="name">Enter your name : </label> 
+        <br><input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- Radio Buttons -->
+        <label for="gender">Enter your gender : </label> 
+        <br><input type="radio" id="genderM" name="gender">
+        <label for="genderM">Male</label>
+        <br><input type="radio" id="genderF" name="gender">
+        <label for="genderF">Female</label>
+        <br><input type="radio" id="genderO" name="gender">
+        <label for="genderO">Others</label>
+        <br><br>
+
+        <!-- Date -->
+        <label for="dob">Enter your date of birth : </label>
+        <br><input type="date" id="dob" name="dob" max="2005-12-31">
+        <br><br>
+
+        <!-- Checkbox + Radio -->
+        <label for="language">Enter languages you know:</label> 
+        <br><input type="checkbox" id="english" name="language">
+        <label for="english">English:</label>
+        <input type="radio" id="englishRead" name="english">
+        <label for="englishRead">Read</label>
+        <input type="radio" id="englishWrite" name="english">
+        <label for="englishWrite">Write</label>
+        <input type="radio" id="EnlishBoth" name="english">
+        <label for="englishBoth">Both</label>
+        <br>
+        <input type="checkbox" id="hindi" name="language">
+        <label for="hindi">Hindi:</label>
+        <input type="radio" id="hindiRead" name="hindi">
+        <label for="hindiRead">Read</label>
+        <input type="radio" id="hindiWrite" name="hindi">
+        <label for="hindiWrite">Write</label>
+        <input type="radio" id="hindiBoth" name="hindi">
+        <label for="hindiBoth">Both</label>
+        <br><br>
+
+
+        <!-- Email Box -->
+        <label for="email">Enter your email : </label>
+        <br><input type="email" id="email" name="email" placeholder="xyz@gmail.com" required>
+        <br><br>
+
+        <!-- Telephone Box -->
+        <label for="mobile">Enter your mobile number : </label>
+        <br><input type="tel" id="mobile" name="mobile" value="+91" pattern="\+91[0-9]{10}" title="Enter 10 digits" required>
+        <br><br>
+
+        <!-- Dropdown -->
+        <label for="city">Enter your city : </label>
+        <br><select id="city" name="city">
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata" selected>Kolkata</option>
+        </select>
+        <br><br>
+
+        <!-- Text Area -->
+        <label for="about">Tell me about yourself : </label>
+        <br><textarea id="about" name="about" rows="3" cols="30" maxlength="150" placeholder="Describe yourself in under 100 words"></textarea>
+        <br><br>
+
+        <!-- Textbox -->
+        <label for="username">Enter username : </label>
+        <br><input type="text" id="username" name="username" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Enter a password : </label>
+        <br><input type="password" id="password" name="password" required>
+        <br><br>
+
+        <hr><hr><br>
+
+        <!-- Submit -->
+        <input type="submit" value="REGISTER">
+
+    </form>
+</body>
+</html>

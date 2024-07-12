@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: whitesmoke;
+            width: 515px;
+            height: 310px;
+            margin: 5px;
+            padding: 5px;
+            border: 2px solid;
+            border-radius: 25px;
+            display: grid;
+            grid-template-rows: 80px 140px 80px;
+            grid-template-areas: 'normal' 'mid' 'normal';
+            align-items: center;
+            justify-items: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .normal {
+            /* background-color: rgb(237, 237, 145); */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            font-size: 70px;
+            font-weight: bold;
+            color: rgb(69, 63, 63);
+            border-radius: 25px;
+        }
+
+        .mid {
+            /* background-color: beige; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 120px;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            color: whitesmoke;
+            /* animation: myAnime 4s ease-in-out 2; */
+        }
+
+        .mid::after {
+            content: "LIFE";
+            position: absolute;
+            padding: 15px;
+            animation: textChange 6s linear infinite;
+        }
+
+        @keyframes textChange {
+            0% {
+                content: "LIFESTYLE";
+                background-color: rgb(102, 229, 102);
+            }
+
+            33% {
+                content: "WORK";
+                background-color: rgb(117, 117, 233);
+            }
+
+            66% {
+                content: "EVERYTHING";
+                background-color: rgb(226, 78, 78);
+            }
+
+            100% {
+                content: "LIFESTYLE";
+                background-color: rgb(133, 236, 133);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="normal">MAKE</div>
+        <div class="mid"></div>
+        <div class="normal">AWESOME !</div>
+    </div>
+
+</body>
+
+</html>

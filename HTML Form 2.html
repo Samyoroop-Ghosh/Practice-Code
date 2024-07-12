@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form 2</title>
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+            align-items: center;
+            padding: 10px;
+            border: 4px;
+            border-style: ridge;
+            background-color: lightblue;
+        }
+
+        label {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" target="_blank" autocomplete="on">
+        <h1 style="text-align: center;">REGISTRATION FORM</h1>
+        <hr>
+
+
+        <label style="text-align: center;">PLEASE ENTER YOUR DETAILS</label>
+        <hr>
+        <ul>
+
+            <li>
+                <label for="mail">Enter your registered email :</label>
+                <br><input type="email" placeholder="your_email@gmail.com" id="mail" name="mail" required>
+            </li>
+
+            <br>
+            <li>
+                <label for="pwd">Enter your password :</label>
+                <br><input type="password" placeholder="Password" id="pwd" name="id" required>
+            </li>
+
+            <br>
+            <li>
+                <label for="phone">Enter your phone :</label>
+                <br><input type="tel" placeholder="+91 " id="phone" name="phone" required>
+            </li>
+            <hr>
+
+            <li id="prof">
+                <label for="prof">Enter your profession :</label>
+                <br><input type="checkbox" id="student" name="prof">
+                <label for="student">Student</label>
+
+                <input type="checkbox" id="teacher" name="prof">
+                <label for="teacher">Teacher</label>
+
+                <input type="checkbox" id="developer" name="prof">
+                <label for="developer">Developer</label>
+
+                <br><label for="stage">Choose the stage if you are student :</label>
+                <select id="stage" name="stage">
+                    <option selected>Class 10</option>
+                    <option>Class 12</option>
+                    <option>Graduation</option>
+                </select>
+            </li>
+            <hr>
+
+            <li>
+                <label for="birth">Enter your Birth Date :</label>
+                <br><input type="date" id="birth" name="birth" max="2005-12-31">
+            </li>
+            <hr>
+
+            <li>
+                <label for="thought">Enter your thoughts :</label>
+                <br><textarea rows="4" cols="40" placeholder="(in 100 words)" id="thought" name="thought" maxlength="100"></textarea>
+            </li>
+            <hr>
+        </ul>
+
+        <input type="submit"  id="submit" name="submit">
+        <input type="reset" id="reset" name="reset">
+
+    </form>
+
+</body>
+
+</html>

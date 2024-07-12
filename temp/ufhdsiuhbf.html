@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+            background-color: lightcoral;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            transition: all 4s;
+        }
+
+        .container:hover {
+            transform: rotate(1deg);
+            transform: scale(1.05);
+        }
+    
+        .container:hover .front{
+            transform: rotateY(180deg);
+        }
+
+        .front, .greetings {
+            width: 28vw;
+            height: 80vh;
+            border: 0.2vw ridge rgb(112, 1, 30);
+            background-color: rgb(255, 224, 229);
+            position: absolute;
+            left: 40%;
+        }
+
+
+        .front {            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            transform-origin: left;
+            transition: all 4s;
+        }
+
+        .front p {
+            font-size: 11vh;
+            font-weight: bold;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(155, 0, 18);
+        }
+
+        .front img {
+            width: 25vw;
+            height: 50vh;
+        }
+
+        .rear {
+            width: 420px;
+            height: 560px;
+            border: 2px ridge rgb(100, 58, 2);
+            background-color: rgb(255, 224, 229);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+
+        .rear img {
+            margin: 20px;
+            width: 300px;
+            height: 400px;
+            rotate: -3deg;
+            border: 0.4vw double;
+            border-radius: 2vwx;
+            opacity: 0.9;
+        }
+
+        .greetings {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            transition: all 2s;
+
+        }
+
+        .greetings p {
+            padding: 3vw;
+            text-align: center;
+            font-size: 4vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(15, 14, 14);
+        }
+
+        .greetings img {
+            width: 3vw;
+            height: 3vw;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="front">
+            <p>HAPPY BIRTHDAY</p>
+            <img src="cake.png">
+        </div>
+
+        <!-- <div class="rear">
+            <img src="pic.jpg">
+        </div> -->
+
+        <div class="greetings">
+            <p>WISHING YOU A VERY HAPPY BIRTHDAY WITH LOTS OF LOVE</p>
+            <img src="love.png">
+        </div>
+        
+    </div>
+</body>
+
+</html>
