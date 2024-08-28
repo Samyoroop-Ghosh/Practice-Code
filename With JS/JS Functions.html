@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+            width: 50%;
+            height: 50%;
+            background-color: aqua;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo"></div>
+    <script>
+        var a = Number(prompt("Enter 1st number : "));
+        var b = Number(prompt("Enter 2nd number : "));
+        var c = Number(prompt("Enter 3rd number : "));
+        //function created using the function keyword
+        function showFunction(x, y, z) {
+            console.log("Using function keyword : ", (x + y + z));
+            return (x+y+z);
+        }
+        showFunction(a,b,c);
+        document.getElementById("demo").innerHTML+=showFunction(a,b,c) + "<br>";
+
+        //function created using the => keyword, in EMCA script
+        const showConst = (x, y, z) => {
+            console.log("Using const keyword : ", (x + y + z));
+            return (x+y+z);
+        }
+        showConst(a,b,c);
+        document.getElementById("demo").innerHTML+=showConst(a,b,c);
+
+        //self invoking function , no seperate call needed
+        (function showFunctionSelf(x, y, z) {
+            console.log("Using Self Invoking Function : ", (x + y + z));
+        })(a,b,c);     
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <h1>PROBLEM 1</h1><br>
+    <script>
+        pattern1(5);
+
+        function pattern1(n) {
+            for (var i = 1; i <= n; i++) {
+                document.write(i + "<br>");
+                for (var j = 1; j <= n; j++) {
+                    document.write(j + " "); //for whitespace printing
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PROBLEM 2</h1><br>
+    <script>
+        pattern2(2);
+
+        function pattern2(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= 10; j++) {
+                    document.write(i + " X " + j + " = " + (i*j) + "<br>");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PROBLEM 3</h1><br>
+    <script>
+        pattern3(5);
+
+        function pattern3(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PROBLEM 4</h1><br>
+    <script>
+        pattern4(5);
+
+        function pattern4(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write(i); //for whitespace printing
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

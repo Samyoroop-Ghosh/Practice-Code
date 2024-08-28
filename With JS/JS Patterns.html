@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <h1>PATTERN 1</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 1 || Enter the no of rows : "));
+        pattern1(n);
+
+        function pattern1(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = n; j >= i; j--) {
+                    document.write("&nbsp");//for whitespace printing
+                }
+
+                for (var k = 1; k <= i; k++) {
+                    document.write("* ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PATTERN 2</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 2 || Enter the no of rows : "));
+        pattern2(n);
+
+        function pattern2(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("&nbsp");//for whitespace printing
+                }
+
+                for (var k = 1; k <= n - i + 1; k++) {
+                    document.write(k + " ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PATTERN 3</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 3 || Enter the no of rows : "));
+        pattern3(n);
+
+        function pattern3(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = n; j >= i; j--) {
+                    document.write("&nbsp &nbsp"); //for whitespace printing
+                }
+
+                for (var k = 1; k <= i; k++) {
+                    document.write(k + " ");
+                }
+
+                for (var l = i - 1; l >= 1; l--) {
+                    document.write(l + " ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PATTERN 4</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 4 || Enter the no of rows : "));
+        pattern4(n);
+
+        function pattern4(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = 1; j <= i; j++) {
+                    document.write("&nbsp &nbsp"); //for whitespace printing
+                }
+
+                for (var k = 1; k <= n - i + 1; k++) {
+                    document.write(k + " ");
+                }
+
+                for (var l = n - i; l >= 1; l--) {
+                    document.write(l + " ");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PATTERN 5</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 5 || Enter the no of rows : "));
+        pattern5(n);
+
+        function pattern5(n) {
+            for (var i = 1; i <= n; i++) {
+                for (var j = n; j >= i; j--) {
+                    document.write("&nbsp;&nbsp;"); //for whitespace printing
+                }
+
+                for (var k = 1; k <= i; k++) {
+                    document.write(String.fromCharCode(64 + k));
+                }
+
+                for (var l = i - 1; l >= 1; l--) {
+                    document.write(String.fromCharCode(64 + l));
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+
+    <br>
+    <h1>PATTERN 6</h1><br>
+    <script>
+        var n = Number(prompt("PATTERN 6 || Enter the no of rows : "));
+        upperPattern6(n);
+        lowerPattern6(n);
+
+        function upperPattern6(n) {
+
+            for (var i = 1; i <= n; i++) {
+                //left side of upper half
+                for (var j = 1; j <= n - i + 1; j++) {
+                    document.write(j);
+                }
+
+                //whitespace printing
+                for (var k = 1; k < 4 * i; k++) {
+                    document.write("&nbsp");
+                }
+
+                //right side of upper half
+                for (var j = n - i + 1; j >= 1; j--) {
+                    document.write(j);
+                }
+
+                document.write("<br>");
+            }
+        }
+
+        function lowerPattern6(n) {
+            for (var i = 1; i <= n; i++) {
+                //left side of lower half
+                for (var j = 1; j <= i; j++) {
+                    document.write(j);
+                }
+
+                //whitespace printing
+                for (var k = 4 * (n - i + 1); k > 1; k--) {
+                    document.write("&nbsp");
+                }
+
+                //right side of lower half
+                for (var j = i; j >= 1; j--) {
+                    document.write(j);
+                }
+
+                document.write("<br>");
+            }
+        }
+    </script>
+</body>
+
+</html>

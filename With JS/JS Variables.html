@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50%;
+            height: 100%;
+            margin: 10px;
+            border: 2px double;
+            border-radius: 25px;
+            background-color: lightyellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width : 90%;
+            height : 30%;
+            margin: 5px;
+            padding: 5px;
+            background-color: lightcoral;
+            border: 1px solid;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .box:hover {
+            opacity: 0.9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Using var</h2>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>
+        </div>
+
+        <div class="box">
+            <h2>Using const</h2>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+        </div>
+
+        <div class="box">
+            <h2>Using let</h2>
+            <p id="demo6"></p>
+            <p id="demo7"></p>
+            <p id="demo8"></p>
+        </div>
+
+    </div>
+    <script>
+        var x = 10;
+        document.getElementById("demo1").innerHTML = "Original X : " + x;
+        {
+            var x = 20;
+            document.getElementById("demo2").innerHTML = "Inside Method X : " + x;
+        }
+        document.getElementById("demo3").innerHTML = "Final X : " + x;
+
+        const fruits = ["Apple", "Mango", "Orange"];
+        document.getElementById("demo4").innerHTML = "Original Array : " + fruits;
+        fruits[0] = "Apricot";
+        fruits.push("Banana");
+        document.getElementById("demo5").innerHTML = "Modified Array : " + fruits;
+
+        let y = 10;
+        document.getElementById("demo6").innerHTML = "Original Y : " + y;
+        {
+            let y = 20;
+            document.getElementById("demo7").innerHTML = "Inside Method Y : " + y;
+        }
+        document.getElementById("demo8").innerHTML = "Final Y : " + y;
+    </script>
+</body>
+
+</html>

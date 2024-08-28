@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 210, 210);
+        }
+
+        #container {
+            width: 30%;
+            height: 30%;
+            margin: 10% auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: whitesmoke;
+        }
+
+        #btn {
+            width: 50%;
+            height: 30%;
+            background-color: rgb(23, 153, 234);
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        #demo {
+            width: auto;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            font-weight: bold;
+            background-color: rgb(153, 246, 155);
+            border: 1px solid;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>JS EVENTS</h3><br>
+
+        <!-- Option 3 : directly calling function through onclick HTML function -->
+        <!-- <button id="btn" onclick="greet()">GREETINGS</button><br> -->
+
+        <button id="btn">GREETINGS</button><br>
+
+        <div id="demo"></div>
+    </div>
+    <script>
+      const demoData = document.getElementById("demo"); //demoData holds the entire <div id="demo"> and not just the content, for easier reference
+
+        //Option 1 : using button id and addEventListener() to specify the event (1st param) and take corresponding action(2nd param)
+        btn.addEventListener('click', () => {
+            var str = prompt("Enter your name : ");
+            demoData.innerHTML = "HELLO " + str + " !!!"; //for front end
+            console.log(demoData.innerHTML); //for console
+        });
+
+        //Option 2 : using button id and addEventListener() to specify the event (1st param) and call a function(2nd param)
+        // btn.addEventListener('click', greet);
+        // function greet() {
+        //     var str = prompt("Enter your name : ");
+        //     demoData.innerHTML = "HELLO " + str + " !!!"; //for front end
+        //     console.log(demoData.innerHTML); //for console
+        // }
+    </script>
+
+</body>
+
+</html>

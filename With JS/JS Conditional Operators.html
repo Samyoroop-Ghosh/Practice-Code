@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>VOTING ELIGIBILITY</h1>
+    <script>
+        var age = prompt("Enter your age : ")
+
+        if (age >= 18)
+            alert("You are eligible to vote");
+        else
+            alert("You are not eligible to vote");
+    </script>
+
+    <h1>TIME BASED GREETING</h1>
+    <script>
+        const date = new Date()
+        var hours = date.getHours()
+
+        if (hours >= 6 && hours <= 11)
+            document.write("It's between 6am - 12pm, hence GOOD MORNING !!!")
+        else if (hours > 11 && hours <= 14)
+            document.write("It's between 12pm - 3pm, hence GOOD AFTERNOON !!!")
+        else if (hours > 14 && hours <= 18)
+            document.write("It's between 3pm - 7pm, hence GOOD EVENING !!!")
+        else if (hours > 18 && hours <= 23)
+            document.write("It's between 7pm - 12am, hence GOOD NIGHT !!!")
+        else
+            document.write("YOU SHOULD SLEEP");
+    </script>
+
+    <h1>RANDOM LINKS</h1>
+    <a id="varLink" target="_blank"></a>
+    <script>
+        var rand = Math.random()
+        var linkElement = document.getElementById("varLink")
+
+        if (rand < 0.5) {
+            linkElement.href = "https://www.linkedin.com";
+            linkElement.innerHTML = "LinkedIn";
+        }
+
+        else {
+            linkElement.href = "https://in.indeed.com";
+            linkElement.innerHTML = "Indeed";
+        }
+    </script>
+
+    <h1>DAY BASED GREETING</h1>
+    <script>
+        const day = new Date()
+        var today = day.getDay()
+        document.write("DAY ", today, "/7<br>")
+        switch (today) {
+            case 0:
+                document.write("SUNDAY")
+                break
+            case 1:
+                document.write("MONDAY")
+                break
+            case 2:
+                document.write("TUESDAY")
+                break
+            case 3:
+                document.write("WEDNESDAY")
+                break
+            case 4:
+                document.write("THURSDAY")
+                break
+            case 5:
+                document.write("FRIDAY")
+                break
+            case 6:
+                document.write("SATURDAY")
+                break
+        }
+    </script> 
+</body>
+
+</html>

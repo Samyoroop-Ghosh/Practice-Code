@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            background-color: aqua;
+        }
+
+        #principal,
+        #rate,
+        #time,
+        #interest {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            margin: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #principal {
+            background-color: aqua;
+        }
+
+        #rate {
+            background-color: rgb(200, 179, 61);
+        }
+
+        #time {
+            background-color: rgb(228, 149, 127);
+        }
+
+        #interest {
+            background-color: rgb(24, 169, 75);
+        }
+
+        #result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 100px;
+            margin: 20px;
+            background-color: bisque;
+            border: 2px double;
+            border-radius: 20px;
+        }
+
+        #simp,
+        #comp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 245px;
+            height: 95px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            border-radius: 18px;
+        }
+
+        #simp {
+            background-color:lightpink;
+        }
+
+        #comp {
+            background-color: lightskyblue;
+        }
+
+        a img {
+            width: 40px;
+            height: 40px;
+        }
+
+    </style>
+    <script>
+        function getValues() {
+            var p = parseFloat(document.getElementById('p-input').value); // Get the principal from input
+            var r = parseFloat(document.getElementById('r-input').value); // Get the rate from input
+            var t = parseFloat(document.getElementById('t-input').value); // Get the time from input
+
+            if (isNaN(p) || isNaN(r) || isNaN(t)) {
+                alert("Please enter valid numbers for principal, rate, and time.");
+                return null;
+            }
+
+            return {
+                p,
+                r,
+                t
+            };
+        }
+
+        function calculateSI() {
+            var values = getValues();
+            if (values === null) return;
+
+            var {
+                p,
+                r,
+                t
+            } = values;
+            var si = (p * r * t / 100); // Calculate the simple interest
+
+            console.log(`Simple Interest : ${si} per Annum`);
+            document.getElementById('simp').innerHTML = "Simple Interest: \nRs " + si;
+        }
+
+        function calculateCI() {
+            var values = getValues();
+            if (values === null) return;
+
+            var {
+                p,
+                r,
+                t
+            } = values;
+            r = r / 100; // Convert rate to a fraction
+            var ci = p * (Math.pow((1 + r), t) - 1); // Calculate the compound interest
+
+            console.log(`Compound Interest : ${ci} per Annum`);
+            document.getElementById('comp').innerHTML = "Compound Interest: \nRs " + ci;
+        }
+
+        function calculateInterest() {
+            calculateSI(); // Calculate and display Simple Interest
+            calculateCI(); // Calculate and display Compound Interest
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>INTEREST CALCULATOR</h2>
+        <div id="principal">
+            <input type="number" id="p-input" placeholder="Enter Principal" />
+        </div>
+
+        <div id="rate">
+            <input type="number" id="r-input" placeholder="Enter Rate" />
+        </div>
+
+        <div id="time">
+            <input type="number" id="t-input" placeholder="Enter Time" />
+        </div>
+
+        <div id="interest">
+            <button onclick="calculateInterest()">Calculate Interest</button>
+        </div>
+
+        <div id="result">
+            <div id="simp">
+            </div>
+
+            <div id="comp">
+            </div>
+        </div>
+
+
+        <a href="Interest Calculator.html">
+            <img src="reload.png" alt="Click to Refresh" title="Refresh">
+        </a>
+    </div>
+</body>
+
+</html>

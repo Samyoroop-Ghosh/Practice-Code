@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            height: auto;
+            background-color: salmon;    
+            padding : 20px;
+            border-radius: 10px;
+            gap : 20px;
+        }
+
+        #itemsDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+
+        #billsDiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(26, 178, 15);
+            border-radius: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ZOMATO DISCOUNT</h1>
+    <div id="container">
+        <div id="itemsDiv"></div>
+        <div id="billsDiv"></div>
+    </div>
+    <script>
+        var itemPrice = 0
+        var grossPrice = 0
+        var discount = 0
+        var discountRate = 0
+        var maxDiscount = 0
+        var count = 0
+
+
+        do {
+            itemPrice = Number(prompt(" Enter price of Item (-1 for Checkout) :"))
+
+            if (itemPrice == -1) {
+                discountRate = Number(prompt("Enter Discount Rate in % : "))
+                maxDiscount = Number(prompt(" Enter Max Discount Amount : "))
+            }
+            else {
+                count++
+                document.getElementById("itemsDiv").innerHTML += "Item " + count + " : \t\t\t" + itemPrice + "<br>"
+                grossPrice += itemPrice
+            }
+        } while (itemPrice != -1)
+
+        discount = (discountRate * grossPrice / 100)
+
+        if (discount > maxDiscount) {
+            discount = maxDiscount
+        }
+
+        document.getElementById("billsDiv").innerHTML = "Gross Price : " + (grossPrice) + "<br>" + "Discount : " +
+            (discountRate) + "% : " + (discount) + "<br>" + "Net Price : " + (grossPrice - discount) + "<br>"
+    </script>
+</body>
+
+</html>

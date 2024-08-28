@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(255, 210, 210);
+        }
+
+        #container {
+            width: 300px;
+            height: 250px;
+            margin: 10% auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 15px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: whitesmoke;
+        }
+
+        #click {
+            width: 120px;
+            height: 50px;
+            background-color: rgb(23, 153, 234);
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        #demo {
+            width: 200px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>JS EVENTS</h3><br>
+        <button id="click" onclick="showGrade()">CALCULATE GRADE</button><br>
+        <div id="demo"></div>
+    </div>
+    <script>
+        function showGrade() {
+            var a = Number(prompt("Enter marks in Math : "));
+            var b = Number(prompt("Enter marks in English : "));
+            var c = Number(prompt("Enter marks in Science : "));
+
+            var total = (a + b + c);
+            var percentage = (total / 3).toFixed(2);
+
+            if (percentage > 90 && percentage <= 100)
+                grade = "A";
+            else if (percentage > 70 && percentage <= 90)
+                grade = "B";
+            else if (percentage > 50 && percentage <= 70)
+                grade = "C";
+            else if (percentage > 32 && percentage <= 50)
+                grade = "D";
+            else if (percentage <= 32)
+                grade = "F";
+
+            console.log("Total Marks : " + total + "/300 " + " Percentage : " + percentage + "% " + "Grade : " + grade);
+
+            document.getElementById("demo").innerHTML = "Total Marks : " + total + "/300 " + "<br>Percentage : " + percentage + "%" + "<br>Grade : " + grade;
+        } 
+    </script>
+
+</body>
+
+</html>

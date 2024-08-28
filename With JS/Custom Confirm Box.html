@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Variables</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #confirmBox {
+            width: 30%;
+            height: 50%;
+            border: 0.3vh double;
+            border-radius: 2vh;
+            background-color: lightyellow;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #messageBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: 100%;
+            margin: 1vh;
+            padding: 2vh;
+            gap: 5vh;
+            background-color: rgb(111, 208, 232);
+            border: 0.1vh solid;
+            border-radius: 2vh;
+            text-align: center;
+        }
+
+        #selectBox {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #yes,
+        #no {
+            padding : 1vh;
+            text-align: center;
+            background-color: rgb(211, 241, 146);
+            border: 0.1vh solid;
+            border-radius: 2vh;
+            cursor: pointer;
+        }
+
+        #confirmBox:hover #yes {
+            scale: 1.1;
+            opacity: 0.9;
+            font-weight: bold;
+            background-color: rgb(59, 190, 59);
+        }
+
+        #confirmBox:hover #no {
+            scale: 1.1;
+            opacity: 0.9;
+            font-weight: bold;
+            background-color: rgb(247, 122, 128);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="confirmBox">
+        <div id="messageBox">
+            <p id="demo">Are you 18 years old ?</p>
+            <div id="selectBox">
+                <button id="yes" type="button">YES</button>
+                <button id="no" type="button">NO</button>                
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
